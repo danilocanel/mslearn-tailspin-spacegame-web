@@ -1,11 +1,13 @@
 # ASP.NET Core
 
-
+trigger:
 - main
 
-vmImage: ubuntu-latest
+pool:
+  vmImage: ubuntu-latest
 
-buildConfiguration: 'Release'
+variables:
+  buildConfiguration: 'Release'
 
-- script: dotnet build --configuration $(buildConfiguration)
-displayName: 'dotnet build $(buildConfiguration)'
+steps:
+    - script: dotnet build --configuration $(buildConfiguration)
