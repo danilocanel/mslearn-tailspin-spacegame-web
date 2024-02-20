@@ -1,15 +1,11 @@
 # ASP.NET Core
 
 
-desencadenador:
 - main
 
-grupo:
-    vmImage: ubuntu-latest
+vmImage: ubuntu-latest
 
-variables:
-    buildConfiguration: 'Release'
+buildConfiguration: 'Release'
 
-pasos:
 - script: dotnet build --configuration $(buildConfiguration)
 displayName: 'dotnet build $(buildConfiguration)'
